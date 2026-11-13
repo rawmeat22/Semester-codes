@@ -1,0 +1,41 @@
+
+#include <iostream>
+using namespace std;
+
+// Call by Value
+void callByValue(int x)
+{
+    x = x + 10;
+    cout << "Inside Call by Value: " << x << endl;
+}
+
+// Call by Reference
+void callByReference(int &y)
+{
+    y = y + 10;
+    cout << "Inside Call by Reference: " << y << endl;
+}
+
+int main()
+{
+    int a = 20, b = 20;
+
+    cout << "Before Call by Value: " << a << endl;
+    callByValue(a);
+    cout << "After Call by Value: " << a << endl;
+
+    cout << "\nBefore Call by Reference: " << b << endl;
+    callByReference(b);
+    cout << "After Call by Reference: " << b << endl;
+
+    return 0;
+}
+
+
+Before Call by Value: 20
+Inside Call by Value: 30
+After Call by Value: 20
+
+Before Call by Reference: 20
+Inside Call by Reference: 30
+After Call by Reference: 30
